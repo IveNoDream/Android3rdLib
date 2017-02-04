@@ -1,13 +1,13 @@
-package wafe.mibound.root.android3rdlib;
+package com.wafe.android3rdlib;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Main extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_main);
     }
 }

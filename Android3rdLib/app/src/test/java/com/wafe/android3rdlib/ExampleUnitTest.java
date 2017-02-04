@@ -1,4 +1,4 @@
-package wafe.mibound.root.android3rdlib;
+package com.wafe.android3rdlib;
 
 import org.junit.Test;
 
