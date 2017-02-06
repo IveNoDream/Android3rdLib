@@ -9,7 +9,7 @@ import com.wafe.android3rdlib.R;
 /**
  * Created by root on 2/6/17.
  */
-public class RecyclerViewHolderTwo extends BaseViewHolder {
+public class RecyclerViewHolderTwo extends BaseViewHolder<RVDataModelTwo> {
     private ImageView mIVHead;
     private TextView mTvTitle;
     private TextView mTvDescribtion;
@@ -21,7 +21,7 @@ public class RecyclerViewHolderTwo extends BaseViewHolder {
     }
 
     @Override
-    public void bingHolder(RVDataModel model) {
+    public void bingHolder(RVDataModelTwo model) {
         mIVHead.setImageResource(model.getmImageRes());
         mTvTitle.setText(model.getmTitle());
         mTvDescribtion.setText(model.getmDescribtion());

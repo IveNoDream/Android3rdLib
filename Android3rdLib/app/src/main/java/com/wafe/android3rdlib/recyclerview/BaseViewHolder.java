@@ -6,10 +6,11 @@ import android.view.View;
 /**
  * Created by root on 2/6/17.
  */
-public abstract  class BaseViewHolder extends RecyclerView.ViewHolder {
+//pattern T
+public abstract  class BaseViewHolder<T> extends RecyclerView.ViewHolder {
     public BaseViewHolder(View itemView) {
         super(itemView);
     }
 
-    public abstract void bingHolder(RVDataModel model);
+    public abstract void bingHolder(T model);
 }

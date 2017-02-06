@@ -5,12 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.wafe.android3rdlib.DataModel;
-import com.wafe.android3rdlib.LogUtils;
 import com.wafe.android3rdlib.R;
 
 import java.util.ArrayList;
@@ -70,20 +67,27 @@ public class ActivityRVMain extends AppCompatActivity {
     }
 
     private void initDatas(){
-        List<RVDataModel> models = new ArrayList<>();
-
-        for (int i = 0; i < 30; i++) {
-            RVDataModel model;
-            if (i < 10) {
-                model = new RVDataModel(1,mColor[0],"Title"+i,"Desc"+i,"Time"+i);
-            } else if (10 <= i && 20 > i) {
-                model = new RVDataModel(2,mColor[1],"Title"+i,"Desc"+i);
-            } else {
-                model = new RVDataModel(3,mColor[2],"Title"+i);
-            }
-
-            models.add(model);
+        List<RVDataModelOne> list1 = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            RVDataModelOne model;
+            model = new RVDataModelOne(mColor[0],"Title"+i,"Desc"+i,"Time"+i);
+            list1.add(model);
         }
-        mAdapter.setDatas(models);
+
+        List<RVDataModelTwo> list2 = new ArrayList<>();
+        for (int i = 0; i < 15; i++) {
+            RVDataModelTwo model;
+            model = new RVDataModelTwo(mColor[0],"Title"+i,"Desc"+i);
+            list2.add(model);
+        }
+
+        List<RVDataModelThree> list3 = new ArrayList<>();
+        for (int i = 0; i < 20; i++) {
+            RVDataModelThree model;
+            model = new RVDataModelThree(mColor[0],"Title"+i);
+            list3.add(model);
+        }
+
+        mAdapter.setDatas(list1,list2,list3);
     }
 }
