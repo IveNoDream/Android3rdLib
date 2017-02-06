@@ -3,6 +3,7 @@ package com.wafe.android3rdlib.recyclerview;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -26,8 +27,10 @@ public class ActivityRVMain extends AppCompatActivity {
 
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_main_pro);
 
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this,
-                LinearLayoutManager.VERTICAL,false));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);//pram 2: columes for each line
+        mRecyclerView.setLayoutManager(gridLayoutManager);
+        //mRecyclerView.setLayoutManager(new LinearLayoutManager(this,
+        //        LinearLayoutManager.VERTICAL,false));
         mAdapter = new RecyclerAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
         initDatas();
