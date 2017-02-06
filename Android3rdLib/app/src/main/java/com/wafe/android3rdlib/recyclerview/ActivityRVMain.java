@@ -1,11 +1,13 @@
 package com.wafe.android3rdlib.recyclerview;
 
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.wafe.android3rdlib.DataModel;
 import com.wafe.android3rdlib.LogUtils;
@@ -46,6 +48,24 @@ public class ActivityRVMain extends AppCompatActivity {
         //        LinearLayoutManager.VERTICAL,false));
         mAdapter = new RecyclerAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
+
+        mRecyclerView.addItemDecoration(new RecyclerView.ItemDecoration() {
+            @Override
+            public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+                GridLayoutManager.LayoutParams layoutParams = (GridLayoutManager.LayoutParams) view.getLayoutParams();
+                int spanSize = layoutParams.getSpanSize();
+                int spanIndex = layoutParams.getSpanIndex();
+                outRect.top = 20;
+                if (spanSize != gridLayoutManager.getSpanCount()) {
+                    if (1 == spanIndex) {
+                        outRect.left = 10;
+                    } else {
+                        outRect.right = 10;
+                    }
+                }
+            }
+        });
+
         initDatas();
     }
 
