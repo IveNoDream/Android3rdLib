@@ -7,6 +7,8 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.wafe.android3rdlib.DataModel;
+import com.wafe.android3rdlib.LogUtils;
 import com.wafe.android3rdlib.R;
 
 import java.util.ArrayList;
@@ -27,7 +29,18 @@ public class ActivityRVMain extends AppCompatActivity {
 
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_main_pro);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);//pram 2: columes for each line
+        final GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);//pram 2: columes for each line
+        gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {//Occupy columes in a line(GridLayout)
+                int type = mRecyclerView.getAdapter().getItemViewType(position);
+                if (RVDataModel.TYPE_ONE == type) {
+                    return gridLayoutManager.getSpanCount();//colume count
+                } else {
+                    return 1;
+                }
+            }
+        });
         mRecyclerView.setLayoutManager(gridLayoutManager);
         //mRecyclerView.setLayoutManager(new LinearLayoutManager(this,
         //        LinearLayoutManager.VERTICAL,false));
@@ -41,23 +54,14 @@ public class ActivityRVMain extends AppCompatActivity {
 
         for (int i = 0; i < 30; i++) {
             RVDataModel model;
-            int p = (i + 1) % 5;
-            switch (p) {
-                case 1:
-                case 2:
-                    model = new RVDataModel(1,mColor[0],"Title"+i,"Desc"+i,"Time"+i);
-                    break;
-                case 3:
-                    model = new RVDataModel(1,mColor[1],"Title"+i,"Desc"+i);
-                    break;
-                case 0:
-                case 4:
-                    model = new RVDataModel(1,mColor[2],"Title"+i);
-                    break;
-                default:
-                    model = new RVDataModel(1,mColor[0],"Title"+i,"Desc"+i,"Time"+i);
-                    break;
+            if (i < 10) {
+                model = new RVDataModel(1,mColor[0],"Title"+i,"Desc"+i,"Time"+i);
+            } else if (10 <= i && 20 > i) {
+                model = new RVDataModel(2,mColor[1],"Title"+i,"Desc"+i);
+            } else {
+                model = new RVDataModel(3,mColor[2],"Title"+i);
             }
+
             models.add(model);
         }
         mAdapter.setDatas(models);
