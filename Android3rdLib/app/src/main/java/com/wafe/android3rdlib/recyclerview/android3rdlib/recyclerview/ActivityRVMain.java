@@ -1,4 +1,4 @@
-package com.wafe.android3rdlib.recyclerview;
+package com.wafe.android3rdlib.recyclerview.android3rdlib.recyclerview;
 
 import android.graphics.Rect;
 import android.os.Bundle;

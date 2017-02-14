@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.wafe.android3rdlib.main.LogUtils;
+import com.wafe.android3rdlib.util.LogUtils;
 import com.wafe.android3rdlib.R;
 
 import java.util.ArrayList;
@@ -16,8 +16,8 @@ import java.util.Map;
 /**
  * Created by root on 2/6/17.
  */
-public class RecyclerAdapter extends RecyclerView.Adapter<BaseViewHolder> {
-    private final static String TAG = "RecyclerAdapter";
+public class RVAdapter extends RecyclerView.Adapter<RVBaseViewHolder> {
+    private final static String TAG = "RVAdapter";
 
     private LayoutInflater inflater;
     List<Integer> types = new ArrayList<>();
@@ -42,37 +42,37 @@ public class RecyclerAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         }
     }
 
-    public RecyclerAdapter(Context context) {
+    public RVAdapter(Context context) {
         this.inflater = LayoutInflater.from(context);
     }
 
     @Override
-    public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RVBaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType) {
             case RVDataModel.TYPE_ONE:
-                return new RecyclerViewHolderOne(inflater.inflate(R.layout.item_recycler_type1,parent,false));
+                return new RVViewHolderOne(inflater.inflate(R.layout.item_recycler_type1,parent,false));
             case RVDataModel.TYPE_TWO:
-                return new RecyclerViewHolderTwo(inflater.inflate(R.layout.item_recycler_type2,parent,false));
+                return new RVViewHolderTwo(inflater.inflate(R.layout.item_recycler_type2,parent,false));
             case RVDataModel.TYPE_THREE:
-                return new RecyclerViewHolderThree(inflater.inflate(R.layout.item_recycler_type3,parent,false));
+                return new RVViewHolderThree(inflater.inflate(R.layout.item_recycler_type3,parent,false));
         }
         return null;
     }
 
     @Override
-    public void onBindViewHolder(BaseViewHolder holder, int position) {
+    public void onBindViewHolder(RVBaseViewHolder holder, int position) {
         int viewType = getItemViewType(position);
         int realPosition = position - mPositions.get(viewType);//the real position in current list
         LogUtils.i(TAG,"viewType: " + viewType + ", position: " + position + ", realPos: " + realPosition);
         switch (viewType) {
             case RVDataModel.TYPE_ONE:
-                ((RecyclerViewHolderOne)holder).bingHolder(list1.get(realPosition));
+                ((RVViewHolderOne)holder).bingHolder(list1.get(realPosition));
                 break;
             case RVDataModel.TYPE_TWO:
-                ((RecyclerViewHolderTwo)holder).bingHolder(list2.get(realPosition));
+                ((RVViewHolderTwo)holder).bingHolder(list2.get(realPosition));
                 break;
             case RVDataModel.TYPE_THREE:
-                ((RecyclerViewHolderThree)holder).bingHolder(list3.get(realPosition));
+                ((RVViewHolderThree)holder).bingHolder(list3.get(realPosition));
                 break;
         }
     }

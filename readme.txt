@@ -1,1 +1,0 @@
-#This project all build on Android studio

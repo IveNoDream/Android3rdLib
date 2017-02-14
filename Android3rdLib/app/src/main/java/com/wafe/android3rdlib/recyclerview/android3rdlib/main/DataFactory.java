@@ -1,7 +1,7 @@
-package com.wafe.android3rdlib.main;
+package com.wafe.android3rdlib.recyclerview.android3rdlib.main;
 
 import com.wafe.android3rdlib.R;
-import com.wafe.android3rdlib.recyclerview.ActivityRVMain;
+import com.wafe.android3rdlib.recyclerview.android3rdlib.recyclerview.ActivityRVMain;
 
 import java.util.ArrayList;
 import java.util.List;

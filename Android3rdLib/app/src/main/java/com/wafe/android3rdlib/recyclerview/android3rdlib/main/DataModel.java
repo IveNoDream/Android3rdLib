@@ -1,4 +1,4 @@
-package com.wafe.android3rdlib.main;
+package com.wafe.android3rdlib.recyclerview.android3rdlib.main;
 
 import android.support.v7.app.AppCompatActivity;
 

@@ -1,4 +1,4 @@
-package com.wafe.android3rdlib.main;
+package com.wafe.android3rdlib.util;
 
 import android.util.Log;
 
