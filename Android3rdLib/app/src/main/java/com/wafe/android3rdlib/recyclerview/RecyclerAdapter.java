@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.wafe.android3rdlib.LogUtils;
+import com.wafe.android3rdlib.main.LogUtils;
 import com.wafe.android3rdlib.R;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.wafe.android3rdlib;
+package com.wafe.android3rdlib.main;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -1,4 +1,4 @@
-package com.wafe.android3rdlib;
+package com.wafe.android3rdlib.main;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -7,8 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.wafe.android3rdlib.R;
 
 /**
  * Created by wafe on 2017/2/5.

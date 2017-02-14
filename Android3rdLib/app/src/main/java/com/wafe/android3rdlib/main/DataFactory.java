@@ -1,5 +1,6 @@
-package com.wafe.android3rdlib;
+package com.wafe.android3rdlib.main;
 
+import com.wafe.android3rdlib.R;
 import com.wafe.android3rdlib.recyclerview.ActivityRVMain;
 
 import java.util.ArrayList;
@@ -12,6 +13,6 @@ public class DataFactory {
     public static List<DataModel> RV_DATAS = new ArrayList<>();
 
     static {
-        RV_DATAS.add(new DataModel(ActivityRVMain.class,R.string.rv_title,R.string.rv_describtion));
+        RV_DATAS.add(new DataModel(ActivityRVMain.class, R.string.rv_title,R.string.rv_describtion));
     }
 }
