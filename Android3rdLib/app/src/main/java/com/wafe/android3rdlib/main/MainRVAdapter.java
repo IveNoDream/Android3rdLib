@@ -31,7 +31,7 @@ public class MainRVAdapter extends RecyclerView.Adapter<MainRVHolder> {
 
     @Override
     public MainRVHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.item_main_recycler,parent,false);
+        View view = mInflater.inflate(R.layout.rv_item_main,parent,false);
         return new MainRVHolder(view);
     }
 

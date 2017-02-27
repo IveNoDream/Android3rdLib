@@ -50,11 +50,11 @@ public class RVAdapter extends RecyclerView.Adapter<RVBaseViewHolder> {
     public RVBaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType) {
             case RVDataModel.TYPE_ONE:
-                return new RVViewHolderOne(inflater.inflate(R.layout.item_recycler_type1,parent,false));
+                return new RVViewHolderOne(inflater.inflate(R.layout.rv_item_type1,parent,false));
             case RVDataModel.TYPE_TWO:
-                return new RVViewHolderTwo(inflater.inflate(R.layout.item_recycler_type2,parent,false));
+                return new RVViewHolderTwo(inflater.inflate(R.layout.rv_item_type2,parent,false));
             case RVDataModel.TYPE_THREE:
-                return new RVViewHolderThree(inflater.inflate(R.layout.item_recycler_type3,parent,false));
+                return new RVViewHolderThree(inflater.inflate(R.layout.rv_item_type3,parent,false));
         }
         return null;
     }

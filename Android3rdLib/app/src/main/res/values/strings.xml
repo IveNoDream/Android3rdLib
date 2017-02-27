@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Android3rdLib</string>
+    <string name="app_name">Android</string>
     <string name="rv_title">RecyclerView</string>
     <string name="rv_describtion">RecyclerView</string>
+    <string name="text_tab_other_title">其他</string>
+    <string name="text_tab_3rd_title">第三方</string>
+    <string name="text_tab_frame_title">框架</string>
+    <string name="text_tab_custom_title">自定义控件</string>
+
 </resources>
