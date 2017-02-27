@@ -6,5 +6,13 @@
     <string name="text_tab_3rd_title">第三方</string>
     <string name="text_tab_frame_title">框架</string>
     <string name="text_tab_custom_title">自定义控件</string>
+    
+    <string name="eventbus_title">EventBus</string>
+    <string name="eventbus_details">Android optimized event bus that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality.</string>
+    <string name="eb_turnto_send_activity">跳转到发送页面</string>
+    <string name="eb_send_normal_event">发送普通事件</string>
+    <string name="eb_send_stick_event">发送粘性事件</string>
+    <string name="eb_rev_stick_event">接收粘性事件</string>
+    <string name="eb_rev_info">接收消息:</string>
 
 </resources>

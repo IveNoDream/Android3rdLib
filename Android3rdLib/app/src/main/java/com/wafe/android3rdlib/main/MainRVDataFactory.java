@@ -1,6 +1,7 @@
 package com.wafe.android3rdlib.main;
 
 import com.wafe.android3rdlib.R;
+import com.wafe.android3rdlib.eventbus.EBFirstActivity;
 import com.wafe.android3rdlib.recyclerview.RVActivityMain;
 
 import java.util.ArrayList;
@@ -14,5 +15,6 @@ public class MainRVDataFactory {
 
     static {
         RV_DATAS.add(new MainRVDataModel(RVActivityMain.class, R.string.rv_title,R.string.rv_describtion));
+        RV_DATAS.add(new MainRVDataModel(EBFirstActivity.class, R.string.eventbus_title, R.string.eventbus_details));
     }
 }
