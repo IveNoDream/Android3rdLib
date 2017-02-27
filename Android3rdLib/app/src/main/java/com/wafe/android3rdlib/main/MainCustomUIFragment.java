@@ -16,6 +16,6 @@ public class MainCustomUIFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.main_tab_custom_ui,container,false);
+        return inflater.inflate(R.layout.main_tab_custom_ui_fragment,container,false);
     }
 }

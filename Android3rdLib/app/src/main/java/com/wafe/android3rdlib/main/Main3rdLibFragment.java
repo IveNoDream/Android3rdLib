@@ -27,7 +27,7 @@ public class Main3rdLibFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mFragmentView = inflater.inflate(R.layout.activity_main,container,false);
+        mFragmentView = inflater.inflate(R.layout.main_tab_3rdlib_fragment,container,false);
 
         mContext = getActivity();
         init();

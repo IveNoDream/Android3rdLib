@@ -17,6 +17,6 @@ public class MainOtherFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.main_tab_other,container,false);
+        return inflater.inflate(R.layout.main_tab_other_fragment,container,false);
     }
 }
