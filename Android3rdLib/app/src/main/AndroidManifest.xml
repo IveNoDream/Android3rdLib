@@ -18,7 +18,13 @@
 
         <activity android:name=".recyclerview.RVActivityMain"></activity>
         <activity android:name=".eventbus.EBFirstActivity"></activity>
-        <activity android:name=".eventbus.EBSecondActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+        <activity android:name=".eventbus.EBSecondActivity"></activity>
+
+        <activity android:name=".butterknife.BKMainActivity"></activity>
+
+
+
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
         <meta-data
             android:name="com.google.android.gms.version"

@@ -7,6 +7,7 @@
     <string name="text_tab_frame_title">框架</string>
     <string name="text_tab_custom_title">自定义控件</string>
     
+<!--EventBus-->
     <string name="eventbus_title">EventBus</string>
     <string name="eventbus_details">Android optimized event bus that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality.</string>
     <string name="eb_turnto_send_activity">跳转到发送页面</string>
@@ -14,5 +15,15 @@
     <string name="eb_send_stick_event">发送粘性事件</string>
     <string name="eb_rev_stick_event">接收粘性事件</string>
     <string name="eb_rev_info">接收消息:</string>
+
+<!--ButterKnife-->
+    <string name="butterknife_title">ButterKnife</string>
+    <string name="butterknife_details">ButterKnife是一个专注于Android系统的View注入框架,可以减少大量的findViewById以及setOnClickListener代码，可视化一键生成。</string>
+    <string name="bk_textview">文本</string>
+    <string name="bk_checkbutton">Check Button</string>
+    <string name="bk_button">按钮</string>
+    <string name="bk_cb_check_on_toast">选中</string>
+    <string name="bk_cb_check_off_toast">取消选中</string>
+    <string name="bk_button_click_toast">点击了按钮</string>
 
 </resources>
