@@ -6,14 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.wafe.android3rdlib.R;
-import com.wafe.android3rdlib.util.LogUtils;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 
 import static com.wafe.android3rdlib.R.*;
@@ -58,12 +57,10 @@ public class BKMainActivity extends AppCompatActivity {
         mTv.setText("Butterknife run");
     }
 
-    @OnClick(id.bk_cb)
-    void cbClick(View v) {
-        if (mCb.isChecked()) {
-            Toast.makeText(BKMainActivity.this, getResources().getString(string.bk_cb_check_on_toast), Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(BKMainActivity.this, getResources().getString(string.bk_cb_check_off_toast), Toast.LENGTH_SHORT).show();
-        }
+    @OnCheckedChanged(id.bk_cb)
+    void onCheckedChanged(CompoundButton button, boolean checked){
+        Toast.makeText(BKMainActivity.this, checked ? (getResources().getString(
+                string.bk_cb_check_on_toast)) : (getResources().getString(string.bk_cb_check_off_toast)),
+                Toast.LENGTH_SHORT).show();
     }
 }
