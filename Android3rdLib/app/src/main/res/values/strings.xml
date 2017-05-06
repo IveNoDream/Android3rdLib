@@ -26,4 +26,14 @@
     <string name="bk_cb_check_off_toast">取消选中</string>
     <string name="bk_button_click_toast">点击了按钮</string>
 
+<!-- Check Permission-->
+    <string name="check_permission_title">Android 6.0动态检查权限</string>
+    <string name="check_permission_details">获取权限/去设置中设置权限</string>
+    <string name="cp_check_one_permission">获取一个权限</string>
+    <string name="cp_check_onemore_permission">获取多个权限</string>
+    <string name="cp_goto_setting_check_permission">去设置中设置权限</string>
+    <string name="cp_refused_permission">权限拒绝</string>
+    <string name="cp_required_permission_success">请求权限成功</string>
+    <string name="cp_denied_required_permission">权限被拒绝,请到设置中设置权限</string>
+
 </resources>

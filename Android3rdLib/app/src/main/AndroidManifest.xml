@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wafe.android3rdlib">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,6 +24,8 @@
         <activity android:name=".eventbus.EBSecondActivity"></activity>
 
         <activity android:name=".butterknife.BKMainActivity"></activity>
+
+        <activity android:name=".other.checkpermission.CheckPermissionActivity"></activity>
 
 
 
