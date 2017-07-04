@@ -1,4 +1,4 @@
-package com.wafe.android3rdlib.recyclerview;
+package com.wafe.android3rdlib.thirdpartylibs.recyclerview;
 
 /**
  * Created by root on 2/6/17.

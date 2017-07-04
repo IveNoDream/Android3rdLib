@@ -1,4 +1,4 @@
-package com.wafe.android3rdlib.recyclerview;
+package com.wafe.android3rdlib.thirdpartylibs.recyclerview;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;

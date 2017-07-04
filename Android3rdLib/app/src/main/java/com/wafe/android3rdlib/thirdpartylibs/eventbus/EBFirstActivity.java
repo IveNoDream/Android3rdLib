@@ -1,4 +1,4 @@
-package com.wafe.android3rdlib.eventbus;
+package com.wafe.android3rdlib.thirdpartylibs.eventbus;
 
 import android.content.Intent;
 import android.os.Bundle;

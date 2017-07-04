@@ -1,17 +1,19 @@
-package com.wafe.android3rdlib.recyclerview;
+package com.wafe.android3rdlib.thirdpartylibs.recyclerview;
 
 /**
  * Created by root on 2/6/17.
  */
-public class RVDataModelTwo {
+public class RVDataModelOne {
     private int mImageRes;
     private String mTitle;
     private String mDescribtion;
+    private String mTime;
 
-    public RVDataModelTwo(int mImageRes, String mTitle, String mDescribtion) {
+    public RVDataModelOne(int mImageRes, String mTitle, String mDescribtion, String mTime) {
         this.mImageRes = mImageRes;
         this.mTitle = mTitle;
         this.mDescribtion = mDescribtion;
+        this.mTime = mTime;
     }
 
     public int getmImageRes() {
@@ -24,5 +26,9 @@ public class RVDataModelTwo {
 
     public String getmDescribtion() {
         return mDescribtion;
+    }
+
+    public String getmTime() {
+        return mTime;
     }
 }

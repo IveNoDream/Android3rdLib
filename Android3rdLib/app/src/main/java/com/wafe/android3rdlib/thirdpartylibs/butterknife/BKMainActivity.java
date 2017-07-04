@@ -1,4 +1,4 @@
-package com.wafe.android3rdlib.butterknife;
+package com.wafe.android3rdlib.thirdpartylibs.butterknife;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

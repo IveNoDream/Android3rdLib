@@ -19,11 +19,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".recyclerview.RVActivityMain"></activity>
-        <activity android:name=".eventbus.EBFirstActivity"></activity>
-        <activity android:name=".eventbus.EBSecondActivity"></activity>
+        <activity android:name=".thirdpartylibs.recyclerview.RVActivityMain"></activity>
+        <activity android:name=".thirdpartylibs.eventbus.EBFirstActivity"></activity>
+        <activity android:name=".thirdpartylibs.eventbus.EBSecondActivity"></activity>
 
-        <activity android:name=".butterknife.BKMainActivity"></activity>
+        <activity android:name=".thirdpartylibs.butterknife.BKMainActivity"></activity>
 
         <activity android:name=".other.checkpermission.CheckPermissionActivity"></activity>
 

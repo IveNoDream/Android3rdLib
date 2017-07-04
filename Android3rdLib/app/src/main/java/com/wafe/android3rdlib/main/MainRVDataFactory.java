@@ -1,10 +1,10 @@
 package com.wafe.android3rdlib.main;
 
 import com.wafe.android3rdlib.R;
-import com.wafe.android3rdlib.butterknife.BKMainActivity;
-import com.wafe.android3rdlib.eventbus.EBFirstActivity;
+import com.wafe.android3rdlib.thirdpartylibs.butterknife.BKMainActivity;
+import com.wafe.android3rdlib.thirdpartylibs.eventbus.EBFirstActivity;
 import com.wafe.android3rdlib.other.checkpermission.CheckPermissionActivity;
-import com.wafe.android3rdlib.recyclerview.RVActivityMain;
+import com.wafe.android3rdlib.thirdpartylibs.recyclerview.RVActivityMain;
 
 import java.util.ArrayList;
 import java.util.List;

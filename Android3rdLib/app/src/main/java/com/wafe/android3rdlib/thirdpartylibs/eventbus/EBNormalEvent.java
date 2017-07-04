@@ -1,4 +1,4 @@
-package com.wafe.android3rdlib.eventbus;
+package com.wafe.android3rdlib.thirdpartylibs.eventbus;
 
 /**
  * Created by root on 2/27/17.
