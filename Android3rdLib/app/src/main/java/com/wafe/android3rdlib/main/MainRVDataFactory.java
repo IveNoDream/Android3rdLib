@@ -1,6 +1,7 @@
 package com.wafe.android3rdlib.main;
 
 import com.wafe.android3rdlib.R;
+import com.wafe.android3rdlib.other.sysinfo.SysInfoActivity;
 import com.wafe.android3rdlib.thirdpartylibs.butterknife.BKMainActivity;
 import com.wafe.android3rdlib.thirdpartylibs.eventbus.EBFirstActivity;
 import com.wafe.android3rdlib.other.checkpermission.CheckPermissionActivity;
@@ -24,5 +25,6 @@ public class MainRVDataFactory {
 
     static {
         RV_OTHER_DATAS.add(new MainRVDataModel(CheckPermissionActivity.class, R.string.check_permission_title, R.string.check_permission_details));
+        RV_OTHER_DATAS.add(new MainRVDataModel(SysInfoActivity.class, R.string.other_sysinfo_title, R.string.other_sysinfo_details));
     }
 }

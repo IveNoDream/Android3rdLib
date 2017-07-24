@@ -36,4 +36,8 @@
     <string name="cp_required_permission_success">请求权限成功</string>
     <string name="cp_denied_required_permission">权限被拒绝,请到设置中设置权限</string>
 
+<!-- System Info -->
+    <string name="other_sysinfo_title">System Info</string>
+    <string name="other_sysinfo_details">系统信息</string>
+
 </resources>

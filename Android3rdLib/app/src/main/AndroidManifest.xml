@@ -27,6 +27,8 @@
 
         <activity android:name=".other.checkpermission.CheckPermissionActivity"></activity>
 
+        <activity android:name=".other.sysinfo.SysInfoActivity"></activity>
+
 
 
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
