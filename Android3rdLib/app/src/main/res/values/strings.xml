@@ -40,4 +40,8 @@
     <string name="other_sysinfo_title">System Info</string>
     <string name="other_sysinfo_details">系统信息</string>
 
+    <!-- System Info -->
+    <string name="other_systest_title">System Test</string>
+    <string name="other_systest_details">App管理</string>
+
 </resources>
