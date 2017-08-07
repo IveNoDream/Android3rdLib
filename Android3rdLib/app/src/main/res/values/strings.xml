@@ -40,8 +40,14 @@
     <string name="other_sysinfo_title">System Info</string>
     <string name="other_sysinfo_details">系统信息</string>
 
-    <!-- System Info -->
+<!-- System Info -->
     <string name="other_systest_title">System Test</string>
     <string name="other_systest_details">App管理</string>
+
+<!--Bmob Frame Test-->
+    <string name="frame_bmob_test_title">Bmob Test</string>
+    <string name="frame_bmob_test_details">Bmob应用(增加一条数据)</string>
+    <string name="frame_bmob_test_btn_upload">上传一条数据</string>
+    <string name="frame_bmob_test_btn_download">从服务器获取数据</string>
 
 </resources>

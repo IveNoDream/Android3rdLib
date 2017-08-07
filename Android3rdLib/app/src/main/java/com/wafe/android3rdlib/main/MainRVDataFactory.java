@@ -1,6 +1,7 @@
 package com.wafe.android3rdlib.main;
 
 import com.wafe.android3rdlib.R;
+import com.wafe.android3rdlib.frame.bmob.FrameBmobTestActivity;
 import com.wafe.android3rdlib.other.sysinfo.SysInfoActivity;
 import com.wafe.android3rdlib.other.systest.SysTestMainActivity;
 import com.wafe.android3rdlib.thirdpartylibs.butterknife.BKMainActivity;
@@ -17,6 +18,7 @@ import java.util.List;
 public class MainRVDataFactory {
     public static List<MainRVDataModel> RV_DATAS = new ArrayList<>();
     public static List<MainRVDataModel> RV_OTHER_DATAS = new ArrayList<>();
+    public static List<MainRVDataModel> RV_FRAME_DATAS = new ArrayList<>();
 
     static {
         RV_DATAS.add(new MainRVDataModel(RVActivityMain.class, R.string.rv_title,R.string.rv_describtion));
@@ -28,5 +30,9 @@ public class MainRVDataFactory {
         RV_OTHER_DATAS.add(new MainRVDataModel(CheckPermissionActivity.class, R.string.check_permission_title, R.string.check_permission_details));
         RV_OTHER_DATAS.add(new MainRVDataModel(SysInfoActivity.class, R.string.other_sysinfo_title, R.string.other_sysinfo_details));
         RV_OTHER_DATAS.add(new MainRVDataModel(SysTestMainActivity.class, R.string.other_systest_title, R.string.other_systest_details));
+    }
+
+    static {
+        RV_FRAME_DATAS.add(new MainRVDataModel(FrameBmobTestActivity.class,R.string.frame_bmob_test_title,R.string.frame_bmob_test_details));
     }
 }

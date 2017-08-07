@@ -1,4 +1,4 @@
-package com.wafe.android3rdlib.other;
+package com.wafe.android3rdlib.frame;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -10,25 +10,28 @@ import com.wafe.android3rdlib.R;
 import com.wafe.android3rdlib.main.MainRVDataFactory;
 import com.wafe.android3rdlib.main.MainRVDataModel;
 import com.wafe.android3rdlib.main.MainRVHolder;
+import com.wafe.android3rdlib.other.OtherRVAdapter;
 
 /**
- * Created by root on 5/5/17.
+ * Created by root on 8/7/17.
  */
-public class OtherRVAdapter extends RecyclerView.Adapter<MainRVHolder>{
+
+public class FrameRVAdapter extends RecyclerView.Adapter<MainRVHolder>{
     private LayoutInflater mInflater;
-    private OnItemClickListner mOnItemClickListner;
+    private FrameRVAdapter.OnItemClickListner mOnItemClickListner;
     public interface OnItemClickListner{
         void onItemClick(View view, int position);
         void onItemLongClick(View view, int position);
     }
 
-    public void setOnItemClickListner(OnItemClickListner listner) {
+    public void setOnItemClickListner(FrameRVAdapter.OnItemClickListner listner) {
         this.mOnItemClickListner = listner;
     }
 
-    public OtherRVAdapter(Context context){
+    public FrameRVAdapter(Context context){
         mInflater = LayoutInflater.from(context);
     }
+
 
     @Override
     public MainRVHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -38,7 +41,7 @@ public class OtherRVAdapter extends RecyclerView.Adapter<MainRVHolder>{
 
     @Override
     public void onBindViewHolder(MainRVHolder holder, final int position) {
-        MainRVDataModel model = MainRVDataFactory.RV_OTHER_DATAS.get(position);
+        MainRVDataModel model = MainRVDataFactory.RV_FRAME_DATAS.get(position);
         int title = model.getTitle();
         int describtion = model.getDescribtion();
         holder.mTitle.setText(title);
@@ -60,6 +63,6 @@ public class OtherRVAdapter extends RecyclerView.Adapter<MainRVHolder>{
 
     @Override
     public int getItemCount() {
-        return MainRVDataFactory.RV_OTHER_DATAS.size();
+        return MainRVDataFactory.RV_FRAME_DATAS.size();
     }
 }
