@@ -49,6 +49,7 @@
         
         <activity android:name=".frame.bmob.FrameBmobTestActivity" />
         <activity android:name=".custom.view.CustomViewActivity" />
+        <activity android:name=".custom.view.CustomView2DActivity"/>
 
 
 

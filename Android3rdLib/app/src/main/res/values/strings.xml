@@ -53,5 +53,6 @@
 <!--Custom View Test-->
     <string name="custom_view_test_title">View 的初体验</string>
     <string name="custom_view_test_details">View 的研究</string>
+    <string name="custom_view_btn_2d">2D绘图</string>
 
 </resources>

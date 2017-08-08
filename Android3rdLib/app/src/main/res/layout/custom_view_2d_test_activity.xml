@@ -3,10 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     
-    <Button
-        android:id="@+id/btn_2d"
+    <com.wafe.android3rdlib.custom.view.Custom2DView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/custom_view_btn_2d"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>
