@@ -48,6 +48,7 @@
         <activity android:name=".other.systest.AMProcessTest" />
         
         <activity android:name=".frame.bmob.FrameBmobTestActivity" />
+        <activity android:name=".custom.view.CustomViewActivity" />
 
 
 

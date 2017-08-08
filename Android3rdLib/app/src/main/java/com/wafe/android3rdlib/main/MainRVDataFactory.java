@@ -1,6 +1,7 @@
 package com.wafe.android3rdlib.main;
 
 import com.wafe.android3rdlib.R;
+import com.wafe.android3rdlib.custom.view.CustomViewActivity;
 import com.wafe.android3rdlib.frame.bmob.FrameBmobTestActivity;
 import com.wafe.android3rdlib.other.sysinfo.SysInfoActivity;
 import com.wafe.android3rdlib.other.systest.SysTestMainActivity;
@@ -19,6 +20,7 @@ public class MainRVDataFactory {
     public static List<MainRVDataModel> RV_DATAS = new ArrayList<>();
     public static List<MainRVDataModel> RV_OTHER_DATAS = new ArrayList<>();
     public static List<MainRVDataModel> RV_FRAME_DATAS = new ArrayList<>();
+    public static List<MainRVDataModel> RV_CUSTOM_DATS = new ArrayList<>();
 
     static {
         RV_DATAS.add(new MainRVDataModel(RVActivityMain.class, R.string.rv_title,R.string.rv_describtion));
@@ -34,5 +36,9 @@ public class MainRVDataFactory {
 
     static {
         RV_FRAME_DATAS.add(new MainRVDataModel(FrameBmobTestActivity.class,R.string.frame_bmob_test_title,R.string.frame_bmob_test_details));
+    }
+
+    static {
+        RV_CUSTOM_DATS.add(new MainRVDataModel(CustomViewActivity.class,R.string.custom_view_test_title, R.string.custom_view_test_details));
     }
 }
