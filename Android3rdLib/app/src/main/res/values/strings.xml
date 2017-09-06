@@ -6,8 +6,8 @@
     <string name="text_tab_3rd_title">第三方</string>
     <string name="text_tab_frame_title">框架</string>
     <string name="text_tab_custom_title">自定义控件</string>
-    
-<!--EventBus-->
+
+    <!--EventBus-->
     <string name="eventbus_title">EventBus</string>
     <string name="eventbus_details">Android optimized event bus that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality.</string>
     <string name="eb_turnto_send_activity">跳转到发送页面</string>
@@ -16,7 +16,7 @@
     <string name="eb_rev_stick_event">接收粘性事件</string>
     <string name="eb_rev_info">接收消息:</string>
 
-<!--ButterKnife-->
+    <!--ButterKnife-->
     <string name="butterknife_title">ButterKnife</string>
     <string name="butterknife_details">ButterKnife是一个专注于Android系统的View注入框架,可以减少大量的findViewById以及setOnClickListener代码，可视化一键生成。</string>
     <string name="bk_textview">文本</string>
@@ -26,7 +26,7 @@
     <string name="bk_cb_check_off_toast">取消选中</string>
     <string name="bk_button_click_toast">点击了按钮</string>
 
-<!-- Check Permission-->
+    <!-- Check Permission-->
     <string name="check_permission_title">Android 6.0动态检查权限</string>
     <string name="check_permission_details">获取权限/去设置中设置权限</string>
     <string name="cp_check_one_permission">获取一个权限</string>
@@ -36,23 +36,26 @@
     <string name="cp_required_permission_success">请求权限成功</string>
     <string name="cp_denied_required_permission">权限被拒绝,请到设置中设置权限</string>
 
-<!-- System Info -->
+    <!-- System Info -->
     <string name="other_sysinfo_title">System Info</string>
     <string name="other_sysinfo_details">系统信息</string>
 
-<!-- System Info -->
+    <!-- System Info -->
     <string name="other_systest_title">System Test</string>
     <string name="other_systest_details">App管理</string>
 
-<!--Bmob Frame Test-->
+    <!--Bmob Frame Test-->
     <string name="frame_bmob_test_title">Bmob Test</string>
     <string name="frame_bmob_test_details">Bmob应用(增加一条数据)</string>
     <string name="frame_bmob_test_btn_upload">上传一条数据</string>
     <string name="frame_bmob_test_btn_download">从服务器获取数据</string>
 
-<!--Custom View Test-->
+    <!--Custom View Test-->
     <string name="custom_view_test_title">View 的初体验</string>
     <string name="custom_view_test_details">View 的研究</string>
     <string name="custom_view_btn_2d">2D绘图</string>
+    <string name="custom_view_shape_btn">Shape</string>
+    <string name="custom_view_test_shape_title">Shape</string>
+    <string name="custom_view_test_shape_details">Shape的应用</string>
 
 </resources>

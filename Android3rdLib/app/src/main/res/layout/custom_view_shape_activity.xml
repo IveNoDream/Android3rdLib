@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_custom_view_shape"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/custom_view_shape1"/>
+
+</LinearLayout>

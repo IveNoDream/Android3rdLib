@@ -15,12 +15,15 @@ import com.wafe.android3rdlib.R;
 
 public class CustomViewActivity extends AppCompatActivity implements View.OnClickListener{
     private Button mBtn2D = null;
+    private Button mBtnShape = null;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.custom_view_test_activity);
         mBtn2D = (Button) findViewById(R.id.btn_2d);
         mBtn2D.setOnClickListener(this);
+        mBtnShape = (Button) findViewById(R.id.btn_shape);
+        mBtnShape.setOnClickListener(this);
     }
 
 
@@ -31,6 +34,11 @@ public class CustomViewActivity extends AppCompatActivity implements View.OnClic
                 Intent intent = new Intent(CustomViewActivity.this,CustomView2DActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 this.startActivity(intent);
+                break;
+            case R.id.btn_shape:
+                Intent intent1 = new Intent(CustomViewActivity.this,CustomViewShapeActivity.class);
+                intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(intent1);
                 break;
             default:
 
