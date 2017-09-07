@@ -1,6 +1,7 @@
 package com.wafe.android3rdlib.main;
 
 import com.wafe.android3rdlib.R;
+import com.wafe.android3rdlib.custom.view.CustomClockActivity;
 import com.wafe.android3rdlib.custom.view.CustomViewActivity;
 import com.wafe.android3rdlib.custom.view.CustomViewShapeActivity;
 import com.wafe.android3rdlib.frame.bmob.FrameBmobTestActivity;
@@ -41,5 +42,6 @@ public class MainRVDataFactory {
 
     static {
         RV_CUSTOM_DATS.add(new MainRVDataModel(CustomViewActivity.class,R.string.custom_view_test_title, R.string.custom_view_test_details));
+        RV_CUSTOM_DATS.add(new MainRVDataModel(CustomClockActivity.class, R.string.custom_view_clock_title,R.string.custom_view_clock_details));
     }
 }

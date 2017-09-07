@@ -45,6 +45,7 @@
         <activity android:name=".custom.view.CustomViewActivity" />
         <activity android:name=".custom.view.CustomView2DActivity" />
         <activity android:name=".custom.view.CustomViewShapeActivity"/>
+        <activity android:name=".custom.view.CustomClockActivity"/>
 
         <!--
      ATTENTION: This was auto-generated to add Google Play services to your project for
