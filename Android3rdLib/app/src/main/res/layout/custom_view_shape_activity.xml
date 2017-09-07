@@ -5,8 +5,8 @@
 
     <ImageView
         android:id="@+id/iv_custom_view_shape"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:src="@drawable/custom_view_shape1"/>
 
 </LinearLayout>

@@ -41,6 +41,5 @@ public class MainRVDataFactory {
 
     static {
         RV_CUSTOM_DATS.add(new MainRVDataModel(CustomViewActivity.class,R.string.custom_view_test_title, R.string.custom_view_test_details));
-        RV_CUSTOM_DATS.add(new MainRVDataModel(CustomViewShapeActivity.class,R.string.custom_view_test_shape_title, R.string.custom_view_test_shape_details));
     }
 }
