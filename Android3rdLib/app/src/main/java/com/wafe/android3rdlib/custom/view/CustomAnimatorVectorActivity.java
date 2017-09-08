@@ -16,6 +16,7 @@ import com.wafe.android3rdlib.R;
 
 public class CustomAnimatorVectorActivity extends Activity {
     private ImageView iv;
+    private ImageView ivEarth;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,21 @@ public class CustomAnimatorVectorActivity extends Activity {
                 animate();
             }
         });
+
+        ivEarth = (ImageView) findViewById(R.id.iv_custom_view_vector_test_earth);
+        ivEarth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                animateEarth();
+            }
+        });
+    }
+
+    private void animateEarth() {
+        Drawable drawable = ivEarth.getDrawable();
+        if (drawable instanceof Animatable) {
+            ((Animatable)drawable).start();
+        }
     }
 
     private void animate() {
