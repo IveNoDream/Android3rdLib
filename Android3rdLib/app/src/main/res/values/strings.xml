@@ -66,4 +66,10 @@
     <string name="custom_view_surfaceview_btn_sin">绘制正弦曲线</string>
     <string name="custom_view_surfaceview_btn_draw">画图板</string>
 
+
+    <string name="custom_view_animation_title">动画</string>
+    <string name="custom_view_animation_details">SVG,Vector,java实现动画</string>
+    <string name="custom_view_animation_vector">Vector方式实现动画</string>
+    <string name="custom_view_animation_menu">灵动菜单</string>
+
 </resources>

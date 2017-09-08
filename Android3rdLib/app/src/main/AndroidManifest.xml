@@ -48,6 +48,8 @@
         <activity android:name=".custom.view.CustomClockActivity"/>
         <activity android:name=".custom.view.CustomSurfaceViewActivity"/>
         <activity android:name=".custom.view.CustomSurfaceViewSimpleActivity"/>
+        <activity android:name=".custom.view.CustomAnimatorActivity"/>
+        <activity android:name=".custom.view.CustomAnimatorVectorActivity"/>
 
         <!--
      ATTENTION: This was auto-generated to add Google Play services to your project for
