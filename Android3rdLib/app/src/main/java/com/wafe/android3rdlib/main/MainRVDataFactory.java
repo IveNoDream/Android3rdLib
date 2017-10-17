@@ -7,6 +7,7 @@ import com.wafe.android3rdlib.custom.view.CustomSurfaceViewActivity;
 import com.wafe.android3rdlib.custom.view.CustomViewActivity;
 import com.wafe.android3rdlib.custom.view.CustomViewShapeActivity;
 import com.wafe.android3rdlib.frame.bmob.FrameBmobTestActivity;
+import com.wafe.android3rdlib.other.syserror.OtherSysErrorActivity;
 import com.wafe.android3rdlib.other.sysinfo.SysInfoActivity;
 import com.wafe.android3rdlib.other.systest.SysTestMainActivity;
 import com.wafe.android3rdlib.thirdpartylibs.butterknife.BKMainActivity;
@@ -36,6 +37,7 @@ public class MainRVDataFactory {
         RV_OTHER_DATAS.add(new MainRVDataModel(CheckPermissionActivity.class, R.string.check_permission_title, R.string.check_permission_details));
         RV_OTHER_DATAS.add(new MainRVDataModel(SysInfoActivity.class, R.string.other_sysinfo_title, R.string.other_sysinfo_details));
         RV_OTHER_DATAS.add(new MainRVDataModel(SysTestMainActivity.class, R.string.other_systest_title, R.string.other_systest_details));
+        RV_OTHER_DATAS.add(new MainRVDataModel(OtherSysErrorActivity.class,R.string.other_syserror_title,R.string.other_syserror_details));
     }
 
     static {
