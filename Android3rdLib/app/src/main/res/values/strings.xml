@@ -76,4 +76,13 @@
     <string name="other_syserror_details">一些常见错误的实例</string>
     <string name="other_syserror_btn_oom">OutOfMemory Error</string>
 
+    <string name="frame_sql_title">SQLite实例</string>
+    <string name="frame_sql_details">SQLite实例</string>
+    <string name="frame_sql_btn_add">添加数据库</string>
+    <string name="frame_sql_btn_update">更新数据库</string>
+    <string name="frame_sql_btn_create">Create Database</string>
+    <string name="frame_sql_btn_del">删除数据库</string>
+    <string name="frame_sql_btn_query">查询数据库</string>
+
+
 </resources>

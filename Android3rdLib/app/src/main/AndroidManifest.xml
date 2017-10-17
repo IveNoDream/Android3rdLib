@@ -52,6 +52,7 @@
         <activity android:name=".custom.view.CustomAnimatorVectorActivity"/>
         <activity android:name=".other.syserror.OtherSysErrorActivity"/>
         <activity android:name=".other.syserror.OtherOOMTestActivity"/>
+        <activity android:name=".frame.sqlite.FrameSqlMainActivity"/>
 
         <!--
      ATTENTION: This was auto-generated to add Google Play services to your project for
