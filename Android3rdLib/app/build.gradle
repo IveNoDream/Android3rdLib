@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId "com.wafe.android3rdlib"
-        minSdkVersion 23
-        targetSdkVersion 23
+        minSdkVersion 22
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
     }
