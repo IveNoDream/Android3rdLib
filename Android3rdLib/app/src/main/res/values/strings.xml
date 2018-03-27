@@ -72,6 +72,10 @@
     <string name="custom_view_animation_vector">Vector方式实现动画</string>
     <string name="custom_view_animation_menu">灵动菜单</string>
 
+    <!--Custom Move View-->
+    <string name="custom_view_move_title">悬浮窗</string>
+    <string name="custom_view_move_detail">界面悬浮窗,随手指坐标移动,可点击</string>
+
     <string name="other_syserror_title">System error</string>
     <string name="other_syserror_details">一些常见错误的实例</string>
     <string name="other_syserror_btn_oom">OutOfMemory Error</string>
