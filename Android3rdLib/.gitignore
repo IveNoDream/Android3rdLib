@@ -11,3 +11,5 @@
 #added
 .idea
 *.apk 	#optional
+
+/blelib/build

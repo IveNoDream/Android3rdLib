@@ -22,6 +22,16 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="no.nordicsemi.android.LOG" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
     <application
         android:name=".custom.moveview.WMApplication"
         android:allowBackup="true"
@@ -58,6 +68,9 @@
         <activity android:name=".other.syserror.OtherOOMTestActivity"/>
         <activity android:name=".frame.sqlite.FrameSqlMainActivity"/>
         <activity android:name=".custom.moveview.CustomMoveViewActivity"/>
+        <activity android:name=".frame.bleuart.FrameBleUartTestActivity"/>
+
+        <service android:name="com.wafe.android3rdlib.frame.bleuart.UARTService"/>
 
         <!--
      ATTENTION: This was auto-generated to add Google Play services to your project for

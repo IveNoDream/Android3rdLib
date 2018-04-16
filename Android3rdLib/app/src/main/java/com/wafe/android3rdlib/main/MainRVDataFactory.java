@@ -7,6 +7,7 @@ import com.wafe.android3rdlib.custom.view.CustomClockActivity;
 import com.wafe.android3rdlib.custom.view.CustomSurfaceViewActivity;
 import com.wafe.android3rdlib.custom.view.CustomViewActivity;
 import com.wafe.android3rdlib.custom.view.CustomViewShapeActivity;
+import com.wafe.android3rdlib.frame.bleuart.FrameBleUartTestActivity;
 import com.wafe.android3rdlib.frame.bmob.FrameBmobTestActivity;
 import com.wafe.android3rdlib.frame.sqlite.FrameSqlMainActivity;
 import com.wafe.android3rdlib.other.syserror.OtherSysErrorActivity;
@@ -45,6 +46,7 @@ public class MainRVDataFactory {
     static {
         RV_FRAME_DATAS.add(new MainRVDataModel(FrameBmobTestActivity.class,R.string.frame_bmob_test_title,R.string.frame_bmob_test_details));
         RV_FRAME_DATAS.add(new MainRVDataModel(FrameSqlMainActivity.class,R.string.frame_sql_title,R.string.frame_sql_details));
+        RV_FRAME_DATAS.add(new MainRVDataModel(FrameBleUartTestActivity.class,R.string.frame_bleuart_title,R.string.frame_bleuart_details));
     }
 
     static {
