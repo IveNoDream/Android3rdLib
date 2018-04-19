@@ -69,6 +69,7 @@
         <activity android:name=".frame.sqlite.FrameSqlMainActivity"/>
         <activity android:name=".custom.moveview.CustomMoveViewActivity"/>
         <activity android:name=".frame.bleuart.FrameBleUartTestActivity"/>
+        <activity android:name=".custom.customseekbar.CustomSeekBarActivity"/>
 
         <service android:name="com.wafe.android3rdlib.frame.bleuart.UARTService"/>
 

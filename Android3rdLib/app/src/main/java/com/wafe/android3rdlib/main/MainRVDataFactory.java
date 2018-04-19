@@ -1,6 +1,7 @@
 package com.wafe.android3rdlib.main;
 
 import com.wafe.android3rdlib.R;
+import com.wafe.android3rdlib.custom.customseekbar.CustomSeekBarActivity;
 import com.wafe.android3rdlib.custom.moveview.CustomMoveViewActivity;
 import com.wafe.android3rdlib.custom.view.CustomAnimatorActivity;
 import com.wafe.android3rdlib.custom.view.CustomClockActivity;
@@ -55,5 +56,6 @@ public class MainRVDataFactory {
         RV_CUSTOM_DATS.add(new MainRVDataModel(CustomSurfaceViewActivity.class, R.string.custom_view_surfaceview_title, R.string.custom_view_surfaceview_details));
         RV_CUSTOM_DATS.add(new MainRVDataModel(CustomAnimatorActivity.class, R.string.custom_view_animation_title, R.string.custom_view_animation_details));
         RV_CUSTOM_DATS.add(new MainRVDataModel(CustomMoveViewActivity.class,R.string.custom_view_move_title,R.string.custom_view_move_detail));
+        RV_CUSTOM_DATS.add(new MainRVDataModel(CustomSeekBarActivity.class,R.string.custom_seekbar_title,R.string.custom_seedbar_details));
     }
 }

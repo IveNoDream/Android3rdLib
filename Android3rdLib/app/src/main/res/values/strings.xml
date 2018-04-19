@@ -105,5 +105,8 @@
     <string name="devices_list_device_not_supported">Device not supported.</string>
     <string name="not_supported">The device does not have required services.</string>
 
+    <string name="custom_seekbar_title">自定义滑动组件</string>
+    <string name="custom_seedbar_details">进度条</string>
+
 
 </resources>

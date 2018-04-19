@@ -8,4 +8,5 @@
     <color name="divide_line_gray">#F5F5F5</color>
     <color name="tab_bg_color">#FCFCFC</color>
     <color name="text_color_black">#000000</color>
+    <color name="seekbar_color">#FF77CBEA</color>
 </resources>
