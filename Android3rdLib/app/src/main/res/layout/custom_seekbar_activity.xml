@@ -35,8 +35,6 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:padding="15dp"
-            android:thumb="@mipmap/ic_launcher"
-            android:progressDrawable="@null"
             android:max="100"
             android:progress="50"/>
         <!--android:progressDrawable="@drawable/custom_vertical_seekbar_bg"-->
