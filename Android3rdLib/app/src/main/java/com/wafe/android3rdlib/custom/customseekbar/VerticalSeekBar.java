@@ -9,8 +9,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.ShapeDrawable;
-import android.graphics.drawable.shapes.RectShape;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.SeekBar;
@@ -56,7 +54,7 @@ public class VerticalSeekBar extends SeekBar {
 
         //setTextLocation();//定位文本绘制的位置
         Rect rect_seek = this.getProgressDrawable().getBounds();
-        LogUtils.i("ssss","rect_seek before: " + rect_seek);
+        //LogUtils.i("ssss","rect_seek before: " + rect_seek);
         //定位文字背景图片的位置
         float bm_x = rect_seek.width() - rect_seek.width() * getProgress() / getMax();
         float bm_y = rect_seek.height()/2;
@@ -74,7 +72,7 @@ public class VerticalSeekBar extends SeekBar {
         //LogUtils.i("ssss","bitmap: " + bm_x + "," + bm_y + "img: " + img_width + "," + img_height + "text: " + numTextWidth + "," + height);
 
         float text_height = fm.descent - fm.ascent;
-        LogUtils.i("ssss","textW: " + numTextWidth + " textH: " +text_height);
+        //LogUtils.i("ssss","textW: " + numTextWidth + " textH: " +text_height);
         float tx = bm_x + img_width/2 + text_height/2 - text_height /5;//(img_height - text_height)/2 + text_height;//baseline(paint,bm_x + img_width);//bm_x + (img_width - numTextWidth) / 2;
         float ty = bm_y + img_height/2 - numTextWidth/2;//(img_width - numTextWidth)/2 + numTextWidth;//baseline(paint,bm_y + img_height);//bm_y + (img_height - text_height)/2 + text_height;//+ (img_height - txHeight)/2 + txHeight;
         canvas.drawText(mTitleText, ty, tx, paint);//画文字
@@ -87,7 +85,7 @@ public class VerticalSeekBar extends SeekBar {
 
         //canvas.rotate(-90);
         //canvas.translate(-1 * getHeight(),0);
-        LogUtils.i("ssss","rect_seek before: " + this.getProgressDrawable().getBounds());
+        //LogUtils.i("ssss","rect_seek before: " + this.getProgressDrawable().getBounds());
         super.onDraw(canvas);
     }
 

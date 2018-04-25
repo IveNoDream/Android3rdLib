@@ -20,11 +20,11 @@
         android:max="10"
         android:progress="0"/>
 
-    <com.wafe.android3rdlib.custom.customseekbar.VerticalSeekBar
+    <!--<com.wafe.android3rdlib.custom.customseekbar.VerticalSeekBar
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:max="100"
-        android:progress="50"/>
+        android:progress="50"/>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,6 +46,11 @@
                 android:layout_height="200dp" />
 
     </LinearLayout>
+
+    <com.wafe.android3rdlib.custom.customseekbar.CustomRotView
+        android:id="@+id/crv_rotview"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
 
 
 </LinearLayout>
