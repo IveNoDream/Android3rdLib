@@ -16,6 +16,7 @@ import com.wafe.android3rdlib.R;
 
 /**
  * Created by wafej on 2018/4/25.
+ * blog: https://blog.csdn.net/wjw_java_android/article/details/25984749
  */
 
 public class CustomRotView extends View {
