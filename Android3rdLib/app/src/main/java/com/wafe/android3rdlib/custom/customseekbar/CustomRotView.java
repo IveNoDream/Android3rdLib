@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -17,6 +18,8 @@ import com.wafe.android3rdlib.R;
 /**
  * Created by wafej on 2018/4/25.
  * blog: https://blog.csdn.net/wjw_java_android/article/details/25984749
+ *
+ * draw Arc blog:https://blog.csdn.net/qq_18432309/article/details/51811546
  */
 
 public class CustomRotView extends View {
@@ -138,6 +141,27 @@ public class CustomRotView extends View {
 
         canvas.drawBitmap(mRotBitmap, matrix,mPaint);
         //canvas.drawBitmap(mRotBitmap,0,0,mPaint);
+
+
+        mPaint.setStrokeWidth(20);
+        mPaint.setColor(getResources().getColor(R.color.seekbar_color));
+        mPaint.setStyle(Paint.Style.STROKE);//描边
+        mPaint.setStrokeCap(Paint.Cap.ROUND);//圆的
+        float x = (getWidth() - getHeight() / 2) / 2;
+        float y = getHeight() / 4;
+        float rectWidth = (float) (Math.sqrt(bitmapWidth * bitmapWidth + bitmapHeight * bitmapHeight) + 10);
+        if (rectWidth > width) {
+            //means can't draw Arc
+        }
+        float left = (width - rectWidth) / 2;
+        float top = (height - rectWidth) / 2;
+        float right = left + rectWidth;
+        float bottom = top + rectWidth;
+
+
+        RectF oval = new RectF(left, top, right, bottom);
+        canvas.drawArc(oval,-90,mDetaDegree,false,mPaint);
+
         super.onDraw(canvas);
     }
 
