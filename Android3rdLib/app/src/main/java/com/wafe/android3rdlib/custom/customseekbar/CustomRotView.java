@@ -3,6 +3,7 @@ package com.wafe.android3rdlib.custom.customseekbar;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.RectF;
@@ -20,6 +21,8 @@ import com.wafe.android3rdlib.R;
  * blog: https://blog.csdn.net/wjw_java_android/article/details/25984749
  *
  * draw Arc blog:https://blog.csdn.net/qq_18432309/article/details/51811546
+ *
+ * 圆弧箭头:https://blog.csdn.net/zhao__na/article/details/78123288
  */
 
 public class CustomRotView extends View {
@@ -143,16 +146,18 @@ public class CustomRotView extends View {
         //canvas.drawBitmap(mRotBitmap,0,0,mPaint);
 
 
+        //画圆弧
         mPaint.setStrokeWidth(20);
         mPaint.setColor(getResources().getColor(R.color.seekbar_color));
         mPaint.setStyle(Paint.Style.STROKE);//描边
         mPaint.setStrokeCap(Paint.Cap.ROUND);//圆的
-        float x = (getWidth() - getHeight() / 2) / 2;
-        float y = getHeight() / 4;
+        //float x = (getWidth() - getHeight() / 2) / 2;
+        //float y = getHeight() / 4;
         float rectWidth = (float) (Math.sqrt(bitmapWidth * bitmapWidth + bitmapHeight * bitmapHeight) + 10);
         if (rectWidth > width) {
             //means can't draw Arc
         }
+
         float left = (width - rectWidth) / 2;
         float top = (height - rectWidth) / 2;
         float right = left + rectWidth;
@@ -161,6 +166,26 @@ public class CustomRotView extends View {
 
         RectF oval = new RectF(left, top, right, bottom);
         canvas.drawArc(oval,-90,mDetaDegree,false,mPaint);
+
+        //画箭头
+        //计算弧终点坐标
+        canvas.save();
+        float radius = rectWidth/2;
+        canvas.translate(width/2,height/2);
+
+        canvas.rotate(mDetaDegree);
+        canvas.translate(0,-radius);
+
+        if (mDetaDegree < 0) {
+            canvas.drawLine(0, 0, 20, 20, mPaint);
+            canvas.drawLine(0, 0, 20, -20, mPaint);
+        } else if (mDetaDegree > 0) {
+            canvas.drawLine(0, 0, -20, 20, mPaint);
+            canvas.drawLine(0, 0, -20, -20, mPaint);
+        }
+
+        canvas.restore();
+
 
         super.onDraw(canvas);
     }
