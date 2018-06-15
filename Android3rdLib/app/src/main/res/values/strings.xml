@@ -93,6 +93,9 @@
     <string name="frame_bleuart_btn_scan">连接设备</string>
     <string name="frame_bleuart_btn_send">发送</string>
 
+    <string name="frame_xml_handle_title">读写XML</string>
+    <string name="frame_xml_handle_details">读写XML</string>
+
     <string name="scanner_action_scan">Scan</string>
     <string name="scanner_subtitle_not_bonded">AVAILABLE DEVICES:</string>
     <string name="scanner_subtitle_bonded">BONDED DEVICES:</string>

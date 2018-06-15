@@ -5,10 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -39,6 +41,7 @@ public class CheckPermissionActivity extends AppCompatActivity implements View.O
         btnGoSetting.setOnClickListener(this);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -57,6 +60,7 @@ public class CheckPermissionActivity extends AppCompatActivity implements View.O
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private void requestRuntimePermission(Context context, String[] permissions) {
         //int readExtStorage = checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE);
         //int writeExtStorage = checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
@@ -80,6 +84,7 @@ public class CheckPermissionActivity extends AppCompatActivity implements View.O
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         boolean granted = true;
