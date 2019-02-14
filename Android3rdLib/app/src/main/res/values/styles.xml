@@ -16,4 +16,25 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="NumberPopup_Text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:background">@drawable/custom_num_popup_btn_selector</item>
+    </style>
+
+    <style name="NumPopup_divide_line_vertical">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <style name="NumPopup_divide_line_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@android:color/black</item>
+    </style>
+
 </resources>

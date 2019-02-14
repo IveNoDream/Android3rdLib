@@ -72,6 +72,7 @@
         <activity android:name=".custom.customseekbar.CustomSeekBarActivity"/>
         <activity android:name=".frame.xml.FrameXMLHandleActivity"/>
         <activity android:name=".custom.TreeView.TreeViewActivity"/>
+        <activity android:name=".custom.popnumkeyboard.CustomPopNumKeyboard"/>
 
         <service android:name="com.wafe.android3rdlib.frame.bleuart.UARTService"/>
 

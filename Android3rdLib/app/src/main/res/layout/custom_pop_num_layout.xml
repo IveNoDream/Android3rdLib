@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/test_pop_num_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/test_pop_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/app_name"/>
+
+    <com.wafe.android3rdlib.custom.popnumkeyboard.NumInputTextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="@string/app_name"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.wafe.android3rdlib.custom.popnumkeyboard.NumInputTextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:hint="tv1"/>
+        <com.wafe.android3rdlib.custom.popnumkeyboard.NumInputTextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:hint="tv2"/>
+        <com.wafe.android3rdlib.custom.popnumkeyboard.NumInputTextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:hint="tv3"/>
+        <com.wafe.android3rdlib.custom.popnumkeyboard.NumInputTextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:hint="tv4"/>
+        <com.wafe.android3rdlib.custom.popnumkeyboard.NumInputTextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:hint="tv5"/>
+    </RelativeLayout>
+
+</LinearLayout>

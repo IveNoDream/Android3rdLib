@@ -112,6 +112,8 @@
     <string name="custom_seedbar_details">进度条</string>
     <string name="custom_tree_view_title">自定义树形组件</string>
     <string name="custom_tree_view_details">可展开/收缩的树形结构组件</string>
+    <string name="custom_pop_num_activity_title">自定义PopWindow数字键盘</string>
+    <string name="custom_pop_num_activity_details">自定义PopWindow数字键盘</string>
 
 
 </resources>
