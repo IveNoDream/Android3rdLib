@@ -35,6 +35,9 @@ public class NumberPopup extends PopupWindow implements OnClickListener {
     private TextView tv_NumberPopup_9;
     private TextView tv_NumberPopup_0;
     private TextView tv_NumberPopup_p;
+    private TextView tv_NumberPopup_clear;
+    private TextView tv_NumberPopup_cancel;
+    private TextView tv_NumberPopup_OK;
 
     /**
      * 构造函数
@@ -53,7 +56,7 @@ public class NumberPopup extends PopupWindow implements OnClickListener {
 
         //set width and height
         if (windowWidth == 0) {
-            windowWidth = 500;
+            windowWidth = 800;
         }
         if (windowHeight == 0) {
             windowHeight = 600;
@@ -95,6 +98,9 @@ public class NumberPopup extends PopupWindow implements OnClickListener {
         tv_NumberPopup_9 = (TextView) view.findViewById(R.id.tv_NumberPopup_9);
         tv_NumberPopup_0 = (TextView) view.findViewById(R.id.tv_NumberPopup_0);
         tv_NumberPopup_p = (TextView) view.findViewById(R.id.tv_NumberPopup_p);
+        tv_NumberPopup_clear = (TextView) view.findViewById(R.id.tv_NumberPopup_clear);
+        tv_NumberPopup_cancel = (TextView) view.findViewById(R.id.tv_NumberPopup_cancel);
+        tv_NumberPopup_OK = (TextView) view.findViewById(R.id.tv_NumberPopup_ok);
         iv_NumberPopup_Del = (ImageView) view.findViewById(R.id.iv_NumberPopup_Del);
         tv_NumberPopup_1.setOnClickListener(this);
         tv_NumberPopup_2.setOnClickListener(this);
@@ -108,6 +114,9 @@ public class NumberPopup extends PopupWindow implements OnClickListener {
         tv_NumberPopup_0.setOnClickListener(this);
         tv_NumberPopup_p.setOnClickListener(this);
         iv_NumberPopup_Del.setOnClickListener(this);
+        tv_NumberPopup_clear.setOnClickListener(this);
+        tv_NumberPopup_cancel.setOnClickListener(this);
+        tv_NumberPopup_OK.setOnClickListener(this);
     }
 
     public void show() {
@@ -186,12 +195,21 @@ public class NumberPopup extends PopupWindow implements OnClickListener {
                     listener.onDelNum();
                 }
                 break;
-//            case R.id.iv_NumberPopup_Sure:
-//                if (listener != null) {
-//                    listener.onSureNum();
-//                    dismiss();
-//                }
-//                break;
+            case R.id.tv_NumberPopup_clear:
+                if (listener != null) {
+                    listener.onClearNum();
+                }
+                break;
+            case R.id.tv_NumberPopup_cancel:
+                if (listener != null) {
+                    listener.onCancelNum();
+                }
+                break;
+            case R.id.tv_NumberPopup_ok:
+                if (listener != null) {
+                    listener.onSureNum();
+                }
+                break;
             default:
                 break;
         }
@@ -215,7 +233,13 @@ public class NumberPopup extends PopupWindow implements OnClickListener {
         //删除数字事件
         void onDelNum();
 
+        //清空重输
+        void onClearNum();
+
         //确认数字事件
         void onSureNum();
+
+        //取消输入
+        void onCancelNum();
     }
 }

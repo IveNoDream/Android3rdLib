@@ -60,7 +60,17 @@ public class CustomPopNumKeyboard extends AppCompatActivity {
                     }
 
                     @Override
+                    public void onClearNum() {
+
+                    }
+
+                    @Override
                     public void onSureNum() {
+                    }
+
+                    @Override
+                    public void onCancelNum() {
+
                     }
                 });
                 return false;
@@ -106,7 +116,17 @@ public class CustomPopNumKeyboard extends AppCompatActivity {
                     }
 
                     @Override
+                    public void onClearNum() {
+
+                    }
+
+                    @Override
                     public void onSureNum() {
+                    }
+
+                    @Override
+                    public void onCancelNum() {
+
                     }
                 });
                 return false;

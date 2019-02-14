@@ -25,6 +25,10 @@
         <item name="android:background">@drawable/custom_num_popup_btn_selector</item>
     </style>
 
+    <style name="NumberPopup_Text_OK" parent="NumberPopup_Text">
+        <item name="android:layout_weight">2</item>
+    </style>
+
     <style name="NumPopup_divide_line_vertical">
         <item name="android:layout_width">2dp</item>
         <item name="android:layout_height">match_parent</item>

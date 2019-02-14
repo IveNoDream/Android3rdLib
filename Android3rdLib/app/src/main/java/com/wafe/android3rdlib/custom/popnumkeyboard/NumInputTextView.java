@@ -8,6 +8,7 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.wafe.android3rdlib.util.DisplayUtil;
@@ -19,6 +20,8 @@ import com.wafe.android3rdlib.util.DisplayUtil;
 public class NumInputTextView extends TextView {
     private Context mContext;
     private NumberPopup mNumPopWindow;
+    private String mLastNum;
+    private boolean mIsOKClick = false;
     public NumInputTextView(Context context) {
         super(context);
         initInputView(context,null);
@@ -41,6 +44,7 @@ public class NumInputTextView extends TextView {
 
     private void initInputView(Context context, AttributeSet attrs) {
         mContext = context;
+        setSingleLine(true);
         setOnTouchListener(mTouchListener);
     }
 
@@ -52,15 +56,11 @@ public class NumInputTextView extends TextView {
                 mNumPopWindow.dismiss();
                 mNumPopWindow = null;
             }
+            mLastNum = getText().toString().trim();
+            mIsOKClick = false;
             mNumPopWindow = new NumberPopup(mContext, view, 0, 0);
 
-
-            int windowPos[] = calculatePopWindowPos(view, view);
-            int xOff = 20;
-            windowPos[0] -= xOff;
-
-            mNumPopWindow.showAsDropDown(view);
-            //mNumPopWindow.showAtLocation(view, Gravity.TOP | Gravity.RIGHT, 0, 155);
+            mNumPopWindow.showAsDropDown(view,0,0);
             mNumPopWindow.setListener(new NumberPopup.AddListener() {
                 /**
                  * 重写数组选择事件
@@ -72,6 +72,7 @@ public class NumInputTextView extends TextView {
                 public void onChooseNum(String strNum) {
                     String strProductId = getText().toString();
                     setText(String.format("%s%s", strProductId, strNum));
+                    setGravity(Gravity.CENTER);
                 }
 
                 /**
@@ -88,43 +89,36 @@ public class NumInputTextView extends TextView {
                 }
 
                 @Override
+                public void onClearNum() {
+                    setText("");
+                }
+
+                @Override
                 public void onSureNum() {
+                    mIsOKClick = true;
+                    mNumPopWindow.dismiss();
+                }
+
+                @Override
+                public void onCancelNum() {
+                    mNumPopWindow.dismiss();
+                }
+            });
+
+            mNumPopWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+                @Override
+                public void onDismiss() {
+                    if (mIsOKClick) {
+                        return;
+                    }
+                    if (!TextUtils.isEmpty(mLastNum)) {
+                        setText(mLastNum);
+                    } else {
+                        setText("");
+                    }
                 }
             });
             return false;
         }
     };
-
-
-    /**
-     * 计算出来的位置，y方向就在anchorView的上面和下面对齐显示，x方向就是与屏幕右边对齐显示
-     * 如果anchorView的位置有变化，就可以适当自己额外加入偏移来修正
-     * @param anchorView  呼出window的view
-     * @param contentView   window的内容布局
-     * @return window显示的左上角的xOff,yOff坐标
-     */
-    private static int[] calculatePopWindowPos(final View anchorView, final View contentView) {
-        final int windowPos[] = new int[2];
-        final int anchorLoc[] = new int[2];
-        // 获取锚点View在屏幕上的左上角坐标位置
-        anchorView.getLocationOnScreen(anchorLoc);
-        final int anchorHeight = anchorView.getHeight();
-        // 获取屏幕的高宽
-        final int screenHeight = DisplayUtil.getScreenHeight(anchorView.getContext());
-        final int screenWidth = DisplayUtil.getScreenWidth(anchorView.getContext());
-        contentView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
-        // 计算contentView的高宽
-        final int windowHeight = contentView.getMeasuredHeight();
-        final int windowWidth = contentView.getMeasuredWidth();
-        // 判断需要向上弹出还是向下弹出显示
-        final boolean isNeedShowUp = (screenHeight - anchorLoc[1] - anchorHeight < windowHeight);
-        if (isNeedShowUp) {
-            windowPos[0] = screenWidth - windowWidth;
-            windowPos[1] = anchorLoc[1] - windowHeight;
-        } else {
-            windowPos[0] = screenWidth - windowWidth;
-            windowPos[1] = anchorLoc[1] + anchorHeight;
-        }
-        return windowPos;
-    }
 }
